@@ -3,7 +3,7 @@
     <Nuxt />
     <hr>
     <p>
-      <center>Made with ❤ by mong.</center>
+      <center>Made by mong. 2021/02/26</center>
     </p>
   </div>
 </template>
