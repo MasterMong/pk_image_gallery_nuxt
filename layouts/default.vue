@@ -4,6 +4,8 @@
     <hr>
     <p>
       <center>Made by mong. 2021/02/26</center>
+       <a href='https://dissertation-writingservice.com/'>Counter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d0e01bcd5a9836eb8a95ea4563b8061a471a19d3'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/798561/t/1"></script>
     </p>
   </div>
 </template>

@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "copy": "cp -r ./dist ./docs"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
