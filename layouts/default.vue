@@ -1,19 +1,25 @@
 <template>
   <div>
     <Nuxt />
-    <hr>
+    <hr />
     <p>
-      <center>Made by mong. 2021/02/26</center>
-       <a href='https://dissertation-writingservice.com/'>Counter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d0e01bcd5a9836eb8a95ea4563b8061a471a19d3'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/798561/t/1"></script>
+      <center>
+        Made by mong. 2021/03/25
+        <img
+          src="https://hitwebcounter.com/counter/counter.php?page=7768293&style=0024&nbdigits=5&type=page&initCount=0"
+          title="Free Counter"
+          Alt="web counter"
+          border="0"
+        />
+      </center>
     </p>
   </div>
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
 body {
-  font-family: 'Prompt', sans-serif !important;
+  font-family: "Prompt", sans-serif !important;
 }
 html {
   font-size: 16px;
