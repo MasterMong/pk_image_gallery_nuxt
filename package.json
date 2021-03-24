@@ -1,6 +1,6 @@
 {
   "name": "pk-image-gallery",
-  "version": "1.0.0",
+  "version": "0.04",
   "private": true,
   "scripts": {
     "dev": "nuxt",
