@@ -77,23 +77,6 @@
         <b-spinner variant="primary" label="Loading..."></b-spinner>
       </div>
     </div>
-    <div id="disqus_thread"></div>
-    <script>
-      (function () {
-        // DON'T EDIT BELOW THIS LINE
-        var d = document,
-          s = d.createElement("script");
-        s.src = "https://gallery-phukhieo.disqus.com/embed.js";
-        s.setAttribute("data-timestamp", +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript
-      >Please enable JavaScript to view the
-      <a href="https://disqus.com/?ref_noscript"
-        >comments powered by Disqus.</a
-      ></noscript
-    >
   </div>
 </template>
 
