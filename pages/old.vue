@@ -90,15 +90,15 @@ export default {
       imageSource: "",
       currentPage: 1,
       url:
-        "https://app.phukhieo.ac.th/api/get/galleries",
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vQDt9V4mtLkAPWNjfxXvfUIkYvo-nZ2nmricNvCqbVGvSGcAy9e8v7VYYv7zUsBeqaf04n_upel-Ob4/pub?gid=0&single=true&output=csv",
       sortBy: "",
       sortDesc: true,
       keyword: "",
       perPage: 80,
       headTable: [
-        { key: "date", label: "ปี-เดือน-วัน", sortable: true },
-        { key: "event", label: "กิจกรรม", sortable: true },
-        { key: "url", label: "ลิงค์", sortable: false },
+        // { key: 'ref', label: 'Ref' },
+        { key: "event", label: "ปี-เดือน-วัน กิจกรรม", sortable: true },
+        { key: "url", label: "ลิงค์", sortable: true },
       ],
     };
   },
@@ -110,9 +110,9 @@ export default {
         "font-size: 16px;color:#2ecc71; background-color:#34495e;"
       );
       this.$axios.get(vm.url).then(function (response) {
-        // console.log(response.data)
+        // console.log(response)
         vm.loaded = true;
-        vm.lists = response.data;
+        vm.lists = vm.csvJSON(response.data);
         console.log(
           "%c" + "Loading success",
           "font-size: 16px;color:#2ecc71; background-color:#34495e;"
@@ -121,6 +121,30 @@ export default {
       });
     },
     csvJSON(csv) {
+      const lines = csv.split("\n");
+      const result = [];
+      // const headers = lines[0].split(',')
+      const headers = ["event", "url"];
+      let empty = false;
+
+      for (let i = 1; i < lines.length; i++) {
+        if (!lines[i]) {
+          continue;
+        }
+        const obj = {};
+        const currentline = lines[i].split(",");
+
+        for (let j = 0; j < headers.length; j++) {
+          obj[headers[j]] = currentline[j];
+          if (currentline[2] === "") {
+            empty = true;
+          }
+        }
+        if (!empty) {
+          result.push(obj);
+        }
+      }
+      return result;
     },
   },
   mounted() {

@@ -4,18 +4,28 @@
     <hr />
     <p>
       <center>
-        Made by mong. 2021/03/25
-        <img
-          src="https://hitwebcounter.com/counter/counter.php?page=7768293&style=0024&nbdigits=5&type=page&initCount=0"
-          title="Free Counter"
-          Alt="web counter"
-          border="0"
-        />
+        Made by mong. 2021/12/10 <b-badge variant="warning">{{counter}}</b-badge>
       </center>
     </p>
   </div>
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      counter: 0,
+      url: 'https://count.mong.workers.dev/gallery'
+    }
+  },
+  mounted() {
+    let vm = this;
+      this.$axios.get(this.url).then(function (response) {
+        // console.log(response.data.value);
+        vm.counter = response.data.value;
+      });
+  },
+}
+</script>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
 body {
